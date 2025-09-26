@@ -21,9 +21,7 @@ data = {
 
 pennData = pd.DataFrame(data)
 
-students_df = pd.DataFrame(data)
-
 #print(round(students_df.describe()))
 
-students_df.to_csv('students_dat00.csv', index = False) # Save to CSV file
+pennData.to_csv('students_dat00.csv', index = False) # Save to CSV file
 #print("DataFrame saved to 'students_data.csv'")
