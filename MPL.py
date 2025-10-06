@@ -1,5 +1,8 @@
 import pandas as pd
 import random
+import matplotlib.pyplot as plt
+
+df = pd.DataFrame()
 
 fNames = ["Mac", "Danielle", "Aiden", "Ben", "Van", "Kaden", "Lucian", "Andrew", "Benedict", "Keaton", "Joe", "Noah", "Roman", "Kyan", "Elijah", "Alexis", "Katerina", "Jill", "Jane", "Emmy", "Emma", "Eliana", "Rachel", "Marge", "Lisa" ]
 lNames = ["Smith", "Jones", "Johnson", "Willaims", "Brown", "Garcia", "Davis",  "Miller", "Wilson", "Moore", "Foster", "Anderson", "Manukyan", "DeFreitas", "Fogarty"]
@@ -21,7 +24,9 @@ data = {
 
 pennData = pd.DataFrame(data)
 
-#print(round(students_df.describe()))
+pennData.to_csv('students_dat00.csv', index = False) # Save to CSV file
 
-pennData.to_csv('pennData.csv', index = False) # Save to CSV file
-#print("DataFrame saved to 'students_data.csv'")
+print(df.describe())
+print(df.info())
+print(df.groupby('Year')['GPA'].mean())
+plt.show
